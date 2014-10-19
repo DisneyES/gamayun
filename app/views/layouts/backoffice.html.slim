@@ -1,0 +1,16 @@
+doctype html
+html
+
+  head
+    title Caligaria
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .options
+      = link_to "New article", new_admin_article_path
+      = link_to "New review", new_admin_review_path
+      - if logged_in?
+        = link_to "Logout", admin_sessions_path, method: :delete
+
+    = yield
