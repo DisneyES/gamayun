@@ -18,3 +18,6 @@
 # Ignore ruby configuration files
 .ruby-gemset
 .ruby-version
+
+# Ignore uploads
+/public/uploads/*
