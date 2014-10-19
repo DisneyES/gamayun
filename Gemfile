@@ -39,3 +39,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'slim-rails'
+gem 'simple_form'
+gem 'carrierwave'
+gem 'sorcery'
