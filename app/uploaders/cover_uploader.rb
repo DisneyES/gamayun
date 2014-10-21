@@ -4,7 +4,7 @@ class CoverUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -14,6 +14,36 @@ class CoverUploader < CarrierWave::Uploader::Base
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
+  version :main_cover_element do
+    process :fit_in_size => [1180, 400]
+  end
+
+  version :cover_element do
+    process :fit_in_size => [590, 200]
+  end
+
+  def fit_in_size(w, h)
+    target_ratio = w.to_f/h
+
+    manipulate! do |img|
+      original_ratio = img[:width].to_f/img[:height]
+
+      if original_ratio > target_ratio
+        new_width = (img[:height].to_f * target_ratio).to_i
+        diff = (img[:width] - new_width)/2
+        img.crop "#{new_width}x#{img[:height]}+#{diff}+0"
+      elsif original_ratio < target_ratio
+        new_height = (img[:width].to_f / target_ratio).to_i
+        diff = (img[:height] - new_height)/2
+        img.crop "#{img[:width]}x#{new_height}+0+#{diff}"
+      end
+
+      img.resize "#{w}x#{h}"
+      img = yield(img) if block_given?
+      img
+    end
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

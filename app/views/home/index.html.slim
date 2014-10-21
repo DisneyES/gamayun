@@ -1,1 +1,7 @@
-h1 Caligaria
+.pure-g
+  .cover_container
+    = render "articles/cover_header", article: @articles.first
+    .other_articles
+      - @articles[1..-1].each do |article|
+        = render "articles/cover_element", article: article
+

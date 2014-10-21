@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     root to: "sessions#new"
   end
 
-  resources :articles, only: :show
-  resources :reviews, only: :show
+  resources :articles, only: [:show, :index]
+  resources :reviews, only: [:show, :index]
 
   root :to => 'home#index'
 end

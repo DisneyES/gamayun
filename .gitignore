@@ -18,3 +18,9 @@
 # Ignore ruby configuration files
 .ruby-gemset
 .ruby-version
+
+# Ignore uploads
+/public/uploads/*
+
+# Ignore .DS_Store
+.DS_Store
