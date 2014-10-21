@@ -1,3 +1,6 @@
-.pure-u-1-1.center
-  = image_tag article.cover_url(:main_cover_element)
-  = article.title
+.pure-u-1-1
+  .article
+    = link_to article do
+      = image_tag article.cover_url(:main_cover_element), class: "pure-img"
+      .article-meta
+        h2 = article.title
