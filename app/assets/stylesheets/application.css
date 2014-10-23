@@ -76,11 +76,12 @@ body {
 
 .main_menu li {
   margin: 0px 8px;
-}
-
-.main_menu li {
   display: inline-block;
   vertical-align: middle;
+}
+
+.main_menu a:hover {
+  font-weight: bolder;
 }
 
 a {
