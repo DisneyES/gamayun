@@ -1,7 +1,6 @@
 .pure-g
-  .cover_container
+  .cover_container.list
     = render "articles/cover_header", article: @articles.first
-    .other_articles
-      - @articles[1..-1].each do |article|
-        = render "articles/cover_element", article: article
+    - @articles[1..-1].each do |article|
+      = render "articles/cover_element", article: article
 

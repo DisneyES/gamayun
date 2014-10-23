@@ -35,12 +35,12 @@ body {
   margin: 10px;
 }
 
-.cover_container .article {
+.list .article {
   position: relative;
   text-align: center;
 }
 
-.cover_container .article-meta {
+.list .article-meta {
   position: absolute;
   bottom: 0;
   z-index: 10;
@@ -49,13 +49,14 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.cover_container .other_articles {
+.list .other_articles {
   margin-top: 10px;
 }
 
 .main_menu {
   text-align: left;
   background-color: black;
+  margin-bottom: 30px;
 }
 
 .main_menu a {
@@ -76,18 +77,29 @@ body {
 
 .main_menu li {
   margin: 0px 8px;
-}
-
-.main_menu li {
   display: inline-block;
   vertical-align: middle;
 }
 
-.cover_container a {
+.main_menu a:hover {
+  font-weight: bolder;
+}
+
+a {
    color: black;
    text-decoration: none;
 }
 
 .cover_container {
-  margin: 10px;
+  margin: 0px 10px;
 }
+
+.content {
+  padding: 0px 5%;
+}
+
+.other_articles .article {
+  padding: 10px 10%;
+
+}
+
