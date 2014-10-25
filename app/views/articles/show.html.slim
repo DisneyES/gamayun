@@ -3,6 +3,7 @@
     .content
       h1 = @article.title
       = @article.body
+      b = @article.author.name
   .pure-u-1-1.pure-u-md-6-24.other_articles
     h2 Other articles
     - @other_articles.each do |article|
