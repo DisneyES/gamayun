@@ -1,6 +1,7 @@
 class Admin::ReviewsController < Admin::AdminController
   def create
     @review = Review.create review_params
+    @review.author = current_user
     redirect_to @review
   end
 
