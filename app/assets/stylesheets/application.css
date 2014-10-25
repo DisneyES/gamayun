@@ -98,6 +98,12 @@ a {
   padding: 0px 5%;
 }
 
+.content .author {
+  font-weight: bolder;
+  text-align: left;
+  margin: 50px;
+}
+
 .other_articles .article {
   padding: 10px 10%;
 }
