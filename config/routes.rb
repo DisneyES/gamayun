@@ -6,6 +6,13 @@ Rails.application.routes.draw do
       delete :destroy, on: :collection
     end
 
+    resources :users, only: :none do
+      collection do
+        get :edit
+        patch :update
+      end
+    end
+
     root to: "sessions#new"
   end
 
