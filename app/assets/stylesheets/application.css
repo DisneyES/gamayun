@@ -104,6 +104,19 @@ a {
   margin: 50px;
 }
 
+.content .author .author-info {
+  padding-top: 10px;
+}
+
+.content .author .author-image {
+  float: left;
+  margin-right: 40px;
+}
+
+.content .author img {
+  border-radius: 100%;
+}
+
 .other_articles .article {
   padding: 10px 10%;
 }
