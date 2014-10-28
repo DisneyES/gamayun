@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class CoverUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -17,13 +17,7 @@ class CoverUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :main_cover_element do
-    process :fit_in_size => [1180, 400]
-  end
-
-  version :cover_element do
-    process :fit_in_size => [590, 200]
-  end
+  process :fit_in_size => [110, 110]
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

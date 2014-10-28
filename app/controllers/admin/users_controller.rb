@@ -1,5 +1,12 @@
 class Admin::UsersController < Admin::AdminController
-  def new_session
-    redirect_to new_admin_session_path unless login(params[:email], params[:password])
+  def update
+    current_user.update user_params
+    redirect_to edit_admin_users_path
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :avatar)
   end
 end

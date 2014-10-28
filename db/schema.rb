@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017174027) do
+ActiveRecord::Schema.define(version: 20141025181211) do
 
   create_table "contents", force: true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141017174027) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cover"
+    t.integer  "author_id"
   end
 
   create_table "users", force: true do |t|
@@ -28,6 +29,8 @@ ActiveRecord::Schema.define(version: 20141017174027) do
     t.string   "salt",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

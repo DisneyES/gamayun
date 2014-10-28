@@ -1,6 +1,7 @@
 class Admin::ArticlesController < Admin::AdminController
   def create
     @article = Article.create article_params
+    @article.author = current_user
     redirect_to @article
   end
 

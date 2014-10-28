@@ -1,0 +1,4 @@
+= simple_form_for current_user, url: admin_users_path, method: :patch do |f|
+  = f.input :name
+  = f.file_field :avatar
+  = f.button :submit

@@ -12,6 +12,7 @@ html
       - if logged_in?
         = link_to "New article", new_admin_article_path
         = link_to "New review", new_admin_review_path
+        = link_to "Edit profile", edit_admin_users_path
         = link_to "Logout", admin_sessions_path, method: :delete
 
     = yield
