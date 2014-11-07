@@ -13,3 +13,6 @@
     - @other_articles.each do |article|
       .article
         = link_to @article.title, @article
+
+- content_for :title do
+  = @article.title
