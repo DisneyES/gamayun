@@ -3,6 +3,10 @@ class Content < ActiveRecord::Base
 
   before_validation :set_url!, on: :create
 
+  def to_param
+    url
+  end
+
   private
 
   def set_url!
