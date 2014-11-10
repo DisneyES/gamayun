@@ -27,3 +27,6 @@
 
 # Ignore database.yml
 config/database.yml
+
+# Ignore s3.yml
+config/s3.yml
