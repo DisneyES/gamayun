@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'sorcery'
 gem 'mini_magick'
+gem 'fog'
 
 # Databases
 group :test do
