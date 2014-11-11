@@ -4,8 +4,9 @@ class Admin::ReviewsController < Admin::AdminController
   end
 
   def create
-    @review = Review.create review_params
+    @review = Review.new review_params
     @review.author = current_user
+    @review.save
     redirect_to @review
   end
 
