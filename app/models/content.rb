@@ -7,6 +7,10 @@ class Content < ActiveRecord::Base
     url
   end
 
+  def html_body
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body).html_safe
+  end
+
   private
 
   def set_url!

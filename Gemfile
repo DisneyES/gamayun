@@ -26,6 +26,9 @@ gem 'sorcery'
 gem 'mini_magick'
 gem 'fog'
 
+# Markdown processer
+gem 'redcarpet'
+
 # Databases
 group :test do
   gem 'sqlite3'
