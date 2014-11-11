@@ -1,4 +1,6 @@
-= simple_form_for [:admin, Review.new] do |f|
-  = f.input :title
-  = f.input :body
+= form_for [:admin, @review], html: { class: "pure-form pure-form-stacked" } do |f|
+  = f.label "Title"
+  = f.text_field :title, class: "pure-input-1"
+  = f.label "Body"
+  = f.text_area :body, class: "pure-input-1"
   = f.button :submit
