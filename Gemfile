@@ -21,11 +21,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'slim-rails'
-gem 'simple_form'
 gem 'carrierwave'
 gem 'sorcery'
 gem 'mini_magick'
 gem 'fog'
+
+# Markdown processer
+gem 'redcarpet'
 
 # Databases
 group :test do
