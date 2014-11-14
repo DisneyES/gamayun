@@ -1,4 +1,8 @@
 class Admin::ArticlesController < Admin::AdminController
+  def index
+    @articles = Article.all
+  end
+
   def new
     @article = Article.new
   end
@@ -7,6 +11,17 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.new article_params
     @article.author = current_user
     @article.save
+    redirect_to @article
+  end
+
+  def edit
+    @article = Article.where(url: params[:id]).limit(1).first
+  end
+
+  def update
+    @article = Article.where(url: params[:id]).limit(1).first
+
+    @article.update article_params
     redirect_to @article
   end
 

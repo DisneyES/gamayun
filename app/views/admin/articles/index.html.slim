@@ -1,0 +1,11 @@
+.pure-u-1-1
+  table.pure-table
+    thead
+      th Title
+      th Author
+      th
+    - @articles.each do |article|
+      tr
+        td = article.title
+        td = article.author
+        td = link_to "Edit", edit_admin_article_path(article)
