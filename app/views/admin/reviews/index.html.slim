@@ -1,0 +1,12 @@
+.pure-u-1-1
+  = link_to "New review", new_admin_review_path, class: "pure-button pure-button-primary"
+  table.pure-table
+    thead
+      th Title
+      th Author
+      th
+    - @reviews.each do |review|
+      tr
+        td = review.title
+        td = review.author
+        td = link_to "Edit", edit_admin_review_path(review)
