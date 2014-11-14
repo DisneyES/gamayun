@@ -8,6 +8,8 @@
           = image_tag @article.author.avatar_url
         .author-info
           h3 = @article.author.name
+    = render "shared/disqus"
+
   .pure-u-1-1.pure-u-md-6-24.other_articles
     h2 Other articles
     - @other_articles.each do |article|
