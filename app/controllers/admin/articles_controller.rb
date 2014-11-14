@@ -11,7 +11,7 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.new article_params
     @article.author = current_user
     @article.save
-    redirect_to @article
+    redirect_to admin_articles_path
   end
 
   def edit
@@ -22,7 +22,7 @@ class Admin::ArticlesController < Admin::AdminController
     @article = Article.where(url: params[:id]).limit(1).first
 
     @article.update article_params
-    redirect_to @article
+    redirect_to admin_articles_path
   end
 
   private
