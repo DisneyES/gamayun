@@ -13,8 +13,8 @@ html
     .pure-menu.pure-menu-open.pure-menu-horizontal
       ul
         - if logged_in?
-          li = link_to "New article", new_admin_article_path
-          li = link_to "New review", new_admin_review_path
+          li = link_to "Articles", admin_articles_path
+          li = link_to "Reviews", admin_reviews_path
           li = link_to "Edit profile", edit_admin_users_path
           li = link_to "Logout", admin_sessions_path, method: :delete
 

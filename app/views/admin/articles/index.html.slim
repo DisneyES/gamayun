@@ -1,0 +1,12 @@
+.pure-u-1-1
+  = link_to "New article", new_admin_article_path, class: "pure-button pure-button-primary"
+  table.pure-table
+    thead
+      th Title
+      th Author
+      th
+    - @articles.each do |article|
+      tr
+        td = article.title
+        td = article.author
+        td = link_to "Edit", edit_admin_article_path(article)
