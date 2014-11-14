@@ -25,6 +25,7 @@ gem 'carrierwave'
 gem 'sorcery'
 gem 'mini_magick'
 gem 'fog'
+gem 'simple_form'
 
 # Markdown processer
 gem 'redcarpet'
