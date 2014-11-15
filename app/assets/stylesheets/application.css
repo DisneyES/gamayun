@@ -48,13 +48,16 @@ body {
   margin: 0 auto;
 }
 
-.main_article {
-  margin: 10px;
-}
-
 .article {
   position: relative;
   text-align: center;
+}
+
+.cover_header .article {
+  margin-bottom: 3px;
+}
+
+.cover_elements .article {
   padding: 3px;
 }
 
