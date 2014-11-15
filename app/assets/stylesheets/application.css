@@ -147,3 +147,14 @@ a {
 #disqus_thread {
   padding: 0 5%;
 }
+
+.header {
+  position: relative;
+}
+
+.header .title {
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+}
