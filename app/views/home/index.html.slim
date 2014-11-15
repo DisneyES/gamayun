@@ -3,5 +3,6 @@
     - if @articles.any?
       = render "articles/cover_header", article: @articles.first
       - @articles[1..-1].each do |article|
-        = render "articles/cover_element", article: article
+        .pure-u-1-1.pure-u-md-1-2
+          = render "articles/cover_element", article: article
 
