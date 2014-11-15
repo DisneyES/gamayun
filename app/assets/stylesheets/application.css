@@ -20,6 +20,12 @@ html, button, input, select, textarea,
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .center {
   margin: 0 auto;
 }
