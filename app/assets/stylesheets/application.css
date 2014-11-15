@@ -20,6 +20,13 @@ html, button, input, select, textarea,
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .center {
   margin: 0 auto;
 }
@@ -37,14 +44,14 @@ body {
   margin: 0 auto;
 }
 
-.cover_container .main_article {
+.main_article {
   margin: 10px;
 }
 
 .article {
   position: relative;
   text-align: center;
-  padding: 0px 2px;
+  padding: 3px;
 }
 
 .article-meta {
@@ -63,7 +70,7 @@ body {
 .main_menu {
   text-align: left;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .main_menu a {
@@ -96,18 +103,14 @@ body {
   display: inline-block;
 }
 
-.main_menu a:hover {
+.main_menu a {
+  text-transform: uppercase;
 }
 
 a {
    color: black;
    text-decoration: none;
-   text-transform: uppercase;
    font-weight: bolder;
-}
-
-.cover_container {
-  margin: 0px 10px;
 }
 
 .content {
@@ -139,4 +142,15 @@ a {
 
 #disqus_thread {
   padding: 0 5%;
+}
+
+.header {
+  position: relative;
+}
+
+.header .title {
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
 }

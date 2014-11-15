@@ -1,7 +1,11 @@
 .pure-g
+  .pure-u-1-1
+    .header
+      = image_tag @article.cover_url(:main_cover_element)
+      .title.pure-u-1-1.pure-u-md-18-24
+        h1 = @article.title
   .pure-u-1-1.pure-u-md-18-24
     .content
-      h1 = @article.title
       = @article.html_body
       .author
         .author-image
