@@ -14,8 +14,8 @@
     - if @other_articles.any?
       h2 Other articles
       - @other_articles.each do |article|
-        .article
-          = link_to @article.title, @article
+        .pure-u-1-1
+          = render "articles/cover_element", article: article
 
 - content_for :title do
   = @article.title

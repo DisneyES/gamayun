@@ -14,6 +14,12 @@
  *= require_self
  */
 
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  /* Set your content font stack here: */
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
 .center {
   margin: 0 auto;
 }
@@ -35,12 +41,13 @@ body {
   margin: 10px;
 }
 
-.list .article {
+.article {
   position: relative;
   text-align: center;
+  padding: 0px 2px;
 }
 
-.list .article-meta {
+.article-meta {
   position: absolute;
   bottom: 0;
   z-index: 10;
@@ -55,19 +62,19 @@ body {
 
 .main_menu {
   text-align: left;
-  background-color: black;
-  margin-bottom: 30px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .main_menu a {
-  color: white;
   text-decoration: none;
 }
 
 .main_menu ul {
   list-style: none;
   margin: 0;
-  padding-left: 10px;
+  padding-left: 5px;
+  padding-right: 20px;
 }
 
 .main_menu li:first-child {
@@ -75,19 +82,28 @@ body {
   margin-right: 20px;
 }
 
+.main_menu li:first-child img {
+  vertical-align: bottom;
+}
+
+.main_menu li:not(:first-child) {
+  float: right;
+  margin-top: 22px;
+}
+
 .main_menu li {
   margin: 0px 8px;
   display: inline-block;
-  vertical-align: middle;
 }
 
 .main_menu a:hover {
-  font-weight: bolder;
 }
 
 a {
    color: black;
    text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bolder;
 }
 
 .cover_container {
@@ -118,6 +134,9 @@ a {
 }
 
 .other_articles .article {
-  padding: 10px 10%;
+  padding: 10px 0px;
 }
 
+#disqus_thread {
+  padding: 0 5%;
+}
