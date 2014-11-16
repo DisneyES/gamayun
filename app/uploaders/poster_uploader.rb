@@ -20,6 +20,10 @@ class PosterUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [99999, 300]
   end
 
+  version :review_gallery do
+    process :fit_in_size => [300, 450]
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
