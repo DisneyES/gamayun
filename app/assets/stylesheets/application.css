@@ -53,10 +53,6 @@ body {
   text-align: center;
 }
 
-.cover_header .content_link {
-  margin-bottom: 3px;
-}
-
 .content_link .content-meta {
   position: absolute;
   bottom: 0;
@@ -86,6 +82,11 @@ body {
     bottom: 0;
     left: 0;
   }
+
+  .cover_header .content_link {
+    margin-bottom: 3px;
+  }
+
 }
 
 .main_menu a {
