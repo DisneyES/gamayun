@@ -21,13 +21,13 @@ class Admin::ReviewsController < Admin::AdminController
   def update
     @review = Review.where(url: params[:id]).limit(1).first
 
-    @review.update article_params
+    @review.update review_params
     redirect_to admin_reviews_path
   end
 
   private
   
   def review_params
-    params.require(:review).permit(:title, :body, :published)
+    params.require(:review).permit(:title, :body, :published, :cover, :poster)
   end
 end

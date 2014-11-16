@@ -1,0 +1,5 @@
+.content_link
+  = link_to content do
+    = image_tag content.poster_url(:review_gallery)
+    .content-meta
+      h3 = content.title

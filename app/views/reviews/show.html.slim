@@ -1,2 +1,27 @@
-h1 = @review.title
-= @review.html_body
+.pure-g
+  .pure-u-1-1
+    .header
+      = image_tag @review.cover_url(:main_cover_element)
+      .title.pure-u-1-1.pure-u-md-18-24
+        h1 = @review.title
+  .pure-u-1-1.pure-u-md-18-24
+    .content
+      .poster
+        = image_tag @review.poster_url(:default_size)
+      = @review.html_body
+      .author
+        .author-image
+          = image_tag @review.author.avatar_url
+        .author-info
+          h3 = @review.author.name
+    = render "shared/disqus"
+
+  .pure-u-1-1.pure-u-md-6-24.other_articles
+    - if @other_reviews.any?
+      h2 Other reviews
+      - @other_reviews.each do |review|
+        .pure-u-1-1
+          = render "contents/cover_element", content: review
+
+- content_for :title do
+  = @review.title

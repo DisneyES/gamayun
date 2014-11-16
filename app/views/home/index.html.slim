@@ -2,8 +2,8 @@
   .list
     - if @articles.any?
       .pure-u-1-1.cover_header
-        = render "articles/cover_header", article: @articles.first
+        = render "contents/cover_header", content: @articles.first
       - @articles[1..-1].each do |article|
         .pure-u-1-2.pure-u-md-1-4.cover_elements
-          = render "articles/cover_element", article: article
+          = render "contents/cover_element", content: article
 

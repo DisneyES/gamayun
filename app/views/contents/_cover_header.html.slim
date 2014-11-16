@@ -1,0 +1,5 @@
+.content_link
+  = link_to content do
+    = image_tag content.cover_url(:main_cover_element)
+    .content-meta
+      h1 = content.title
