@@ -21,11 +21,11 @@ class CoverUploader < CarrierWave::Uploader::Base
   end
 
   version :rectangular_element do
-    process :fit_in_size => [1000, 500]
+    process :fit_in_size => [1200, 600]
   end
 
   version :squared_element do
-    process :fit_in_size => [600, 600]
+    process :fit_in_size => [1200, 1200]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
