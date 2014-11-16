@@ -1,10 +1,10 @@
 = form_for [:admin, @article], html: { class: "pure-form pure-form-stacked" } do |f|
   = f.label "Title"
   = f.text_field :title, class: "pure-input-1"
-  = f.label "Body"
-  = f.text_area :body, class: "pure-input-1"
   = f.label "Cover"
   = f.file_field :cover
   = f.label "Published?"
   = f.check_box :published
+  = f.label "Body"
+  = f.text_area :body, class: "pure-input-1"
   = f.button :submit
