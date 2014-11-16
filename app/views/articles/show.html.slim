@@ -16,7 +16,7 @@
 
   .pure-u-1-1.pure-u-md-6-24.other_articles
     - if @other_articles.any?
-      h2 Other articles
+      h3 Other articles
       - @other_articles.each do |article|
         .pure-u-1-1
           = render "contents/cover_element", content: article

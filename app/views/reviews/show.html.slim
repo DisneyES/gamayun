@@ -18,7 +18,7 @@
 
   .pure-u-1-1.pure-u-md-6-24.other_articles
     - if @other_reviews.any?
-      h2 Other reviews
+      h3 Other reviews
       - @other_reviews.each do |review|
         .pure-u-1-1
           = render "contents/cover_element", content: review
