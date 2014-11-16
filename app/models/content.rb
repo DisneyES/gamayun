@@ -3,8 +3,6 @@ class Content < ActiveRecord::Base
 
   scope :published, -> { where(published: true) }
 
-  before_validation :set_url!, on: :create
-
   mount_uploader :cover, CoverUploader
 
   def to_param
@@ -15,9 +13,7 @@ class Content < ActiveRecord::Base
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body).html_safe
   end
 
-  private
-
   def set_url!
-    self.url ||= title.parameterize
+    self.url = title.parameterize
   end
 end
