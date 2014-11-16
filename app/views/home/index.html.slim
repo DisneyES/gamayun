@@ -5,6 +5,5 @@
         = render "contents/cover_header", content: @main_content
     - if @other_contents
       - @other_contents.each do |content|
-        .pure-u-1-2.pure-u-md-1-4.cover_elements
+        .pure-u-1-1.pure-u-md-1-4.cover_elements
           = render "contents/cover_element", content: content
-

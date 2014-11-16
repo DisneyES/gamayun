@@ -3,3 +3,25 @@
     = image_tag content.cover_url(:main_cover_element)
     .content-meta
       h1 = content.title
+
+javascript:
+  main_cover_url = "#{content.cover_url(:main_cover_element)}"
+  squared_cover_url = "#{content.cover_url(:squared_element)}"
+
+  var mql = window.matchMedia("(min-width: 48em)");
+
+  var handleMediaChange = function (mediaQueryList) {
+    if (mediaQueryList.matches) {
+      if($(".cover_header img").attr("src") != main_cover_url){
+        $(".cover_header img").attr("src", main_cover_url);
+      }
+    }
+    else {
+      if($(".cover_header img").attr("src") != squared_cover_url){
+        $(".cover_header img").attr("src", squared_cover_url)
+      }
+    }
+  }
+
+  mql.addListener(handleMediaChange);
+  handleMediaChange(mql);
