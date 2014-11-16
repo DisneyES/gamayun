@@ -5,6 +5,8 @@ class Content < ActiveRecord::Base
 
   before_validation :set_url!, on: :create
 
+  mount_uploader :cover, CoverUploader
+
   def to_param
     url
   end
