@@ -19,7 +19,7 @@
       h2 Other articles
       - @other_articles.each do |article|
         .pure-u-1-1
-          = render "articles/cover_element", article: article
+          = render "contents/cover_element", content: article
 
 - content_for :title do
   = @article.title
