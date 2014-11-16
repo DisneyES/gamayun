@@ -127,6 +127,10 @@ a {
   overflow: auto;
 }
 
+.content .poster {
+  float: left;
+}
+
 .content .author .author-info {
   padding-top: 10px;
 }
