@@ -79,6 +79,13 @@ body {
   .main_menu ul {
     text-align: right !important;
   }
+
+  .header .title {
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .main_menu a {
@@ -96,7 +103,8 @@ body {
 .main_menu li {
   margin-top: 22px;
   display: inline-block;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .main_menu a {
@@ -148,11 +156,4 @@ a {
 
 .header {
   position: relative;
-}
-
-.header .title {
-  position: absolute;
-  background: white;
-  bottom: 0;
-  left: 0;
 }
