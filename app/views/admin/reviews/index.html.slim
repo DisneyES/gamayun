@@ -4,9 +4,11 @@
     thead
       th Title
       th Author
+      th Published
       th
     - @reviews.each do |review|
       tr
         td = review.title
         td = review.author
+        td style='background: #{review.published ? :green : :red}'
         td = link_to "Edit", edit_admin_review_path(review)

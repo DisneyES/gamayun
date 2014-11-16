@@ -1,3 +1,7 @@
 .padded {
   padding: 0px 20px;
 }
+
+textarea {
+  height: 500px;
+}
