@@ -10,8 +10,13 @@ class Admin::ArticlesController < Admin::AdminController
   def create
     @article = Article.new article_params
     @article.author = current_user
-    @article.save
-    redirect_to admin_articles_path
+    @article.set_url!
+
+    if @article.save
+      redirect_to admin_articles_path
+    else
+      redirect_to :back
+    end
   end
 
   def edit
@@ -21,8 +26,14 @@ class Admin::ArticlesController < Admin::AdminController
   def update
     @article = Article.where(url: params[:id]).limit(1).first
 
-    @article.update article_params
-    redirect_to admin_articles_path
+    @article.assign_attributes article_params
+    @article.set_url!
+
+    if @article.save
+      redirect_to admin_articles_path
+    else
+      redirect_to :back
+    end
   end
 
   private

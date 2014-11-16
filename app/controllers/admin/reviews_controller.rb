@@ -10,8 +10,13 @@ class Admin::ReviewsController < Admin::AdminController
   def create
     @review = Review.new review_params
     @review.author = current_user
-    @review.save
-    redirect_to admin_reviews_path
+    @review.set_url!
+
+    if @review.save
+      redirect_to admin_reviews_path
+    else
+      redirect_to :back
+    end
   end
 
   def edit
@@ -21,8 +26,14 @@ class Admin::ReviewsController < Admin::AdminController
   def update
     @review = Review.where(url: params[:id]).limit(1).first
 
-    @review.update review_params
-    redirect_to admin_reviews_path
+    @review.assign_attributes review_params
+    @review.set_url!
+
+    if @review.save
+      redirect_to admin_reviews_path
+    else
+      redirect_to :back
+    end
   end
 
   private
