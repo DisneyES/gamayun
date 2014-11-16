@@ -19,5 +19,20 @@
         .pure-u-1-1
           = render "contents/cover_element", content: review
 
+javascript:
+  var mql = window.matchMedia("(min-width: 48em)");
+
+  var handleMediaChange = function (mediaQueryList) {
+    if (mediaQueryList.matches) {
+      $(".poster").css('width', 'auto');
+    }
+    else {
+      $(".poster").css('width', '100%');
+    }
+  }
+
+  mql.addListener(handleMediaChange);
+  handleMediaChange(mql);
+
 - content_for :title do
   = @review.title
