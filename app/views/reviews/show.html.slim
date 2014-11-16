@@ -9,11 +9,7 @@
       .poster
         = image_tag @review.poster_url(:default_size)
       = @review.html_body
-      .author
-        .author-image
-          = image_tag @review.author.avatar_url
-        .author-info
-          h3 = @review.author.name
+      = render "contents/author", author: @review.author
     = render "shared/disqus"
 
   .pure-u-1-1.pure-u-md-6-24.other_articles

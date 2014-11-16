@@ -7,11 +7,7 @@
   .pure-u-1-1.pure-u-md-18-24
     .content
       = @article.html_body
-      .author
-        .author-image
-          = image_tag @article.author.avatar_url
-        .author-info
-          h3 = @article.author.name
+      = render "contents/author", author: @article.author
     = render "shared/disqus"
 
   .pure-u-1-1.pure-u-md-6-24.other_articles

@@ -123,9 +123,9 @@ a {
 
 .content .author {
   font-weight: bolder;
-  text-align: left;
-  margin: 50px;
   overflow: auto;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .content .poster {
@@ -135,11 +135,7 @@ a {
 
 .content .author .author-info {
   padding-top: 22px;
-}
-
-.content .author .author-image {
-  float: left;
-  margin-right: 40px;
+  text-align: center;
 }
 
 .content .author img {
