@@ -3,6 +3,10 @@
   = f.text_field :title, class: "pure-input-1"
   = f.label "Body"
   = f.text_area :body, class: "pure-input-1"
+  = f.label "Cover"
+  = f.file_field :cover, class: "pure-input-1"
+  = f.label "Poster"
+  = f.file_field :poster, class: "pure-input-1"
   = f.label "Published?"
   = f.check_box :published
   = f.button :submit
