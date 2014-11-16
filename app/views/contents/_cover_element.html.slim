@@ -1,0 +1,5 @@
+.content_link
+  = link_to content do
+    = image_tag content.cover_url(:squared_element)
+    .content-meta
+      h3 = content.title

@@ -48,16 +48,16 @@ body {
   margin: 0 auto;
 }
 
-.article {
+.content_link {
   position: relative;
   text-align: center;
 }
 
-.cover_header .article {
+.cover_header .content_link {
   margin-bottom: 3px;
 }
 
-.article-meta {
+.content_link .content-meta {
   position: absolute;
   bottom: 0;
   z-index: 10;
