@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150216183915) do
+ActiveRecord::Schema.define(version: 20150216184718) do
 
   create_table "contents", force: true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150216183915) do
     t.string   "url"
     t.boolean  "published",  default: false
     t.string   "poster"
+    t.integer  "section_id"
   end
 
   create_table "sections", force: true do |t|
