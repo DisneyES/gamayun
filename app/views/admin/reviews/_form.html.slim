@@ -7,6 +7,8 @@
   = f.file_field :cover, class: "pure-input-1"
   = f.label "Poster"
   = f.file_field :poster, class: "pure-input-1"
+  = f.label "Section"
+  = f.select "section_id", options_from_collection_for_select(Section.all, "id", "name", @review.section_id), include_blank: true
   = f.label "Body"
   = f.text_area :body, class: "pure-input-1"
   = f.button :submit

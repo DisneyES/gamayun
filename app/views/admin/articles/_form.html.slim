@@ -5,6 +5,8 @@
   = f.file_field :cover
   = f.label "Published?"
   = f.check_box :published
+  = f.label "Section"
+  = f.select "section_id", options_from_collection_for_select(Section.all, "id", "name", @article.section_id), include_blank: true
   = f.label "Body"
   = f.text_area :body, class: "pure-input-1"
   = f.button :submit
