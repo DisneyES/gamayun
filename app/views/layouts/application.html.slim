@@ -18,6 +18,8 @@ html
             ul
               li = link_to "Articles", articles_path
               li = link_to "Reviews", reviews_path
+              - Section.all.each do |section|
+                li = link_to section.name, section
     .supercontainer
       .container
         = yield

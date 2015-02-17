@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:show, :index]
   resources :reviews, only: [:show, :index]
+  resources :sections, only: :show
 
   root :to => 'home#index'
 end

@@ -39,6 +39,6 @@ class Admin::ReviewsController < Admin::AdminController
   private
   
   def review_params
-    params.require(:review).permit(:title, :body, :published, :cover, :poster)
+    params.require(:review).permit(:title, :body, :published, :cover, :poster, :section_id)
   end
 end
